@@ -4,3 +4,4 @@ export.cfg
 export_presets.cfg
 # Carpeta de pruebas
 src/Scenes/Test/
+src/Scenes/Test/Test.tscn
