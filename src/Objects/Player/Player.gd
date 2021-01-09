@@ -1,5 +1,7 @@
 extends KinematicBody2D
 
+#ChronoRevers estuvo aqui jorungando el repositorio
+
 var velocity = Vector2.ZERO
 var MAX_SPEED = 90
 var FRICTION = 500
