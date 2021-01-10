@@ -1,3 +1,25 @@
-[gd_scene format=2]
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://src/Scenes/Tiles/Autotiles.tscn" type="PackedScene" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 9, 7.5 )
 
 [node name="Test Room" type="Node2D"]
+
+[node name="Autotiles" parent="." instance=ExtResource( 1 )]
+tile_data = PoolIntArray( 262145, 2, 0, 262146, 2, 2, 262148, 2, 0, 262149, 2, 1, 262150, 2, 1, 262151, 2, 2, 327681, 0, 65536, 327682, 0, 65537, 327683, 0, 65537, 327684, 0, 65537, 327685, 0, 65537, 327686, 0, 65537, 327687, 0, 65538, 393217, 0, 131072, 393218, 0, 131073, 393219, 0, 131073, 393220, 0, 131073, 393221, 0, 131073, 393222, 0, 131073, 393223, 0, 131074, 458753, 0, 196608, 458754, 0, 196609, 458755, 0, 196609, 458756, 0, 196609, 458757, 0, 196609, 458758, 0, 196609, 458759, 0, 196610 )
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+position = Vector2( 79, 18 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="RigidBody2D"]
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource( 1 )
