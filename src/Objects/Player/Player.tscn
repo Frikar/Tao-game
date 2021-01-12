@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://src/Objects/Player/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/Player/animation_tao_C3_B3-Sheet.png" type="Texture" id=2]
@@ -212,6 +212,9 @@ graph_offset = Vector2( 61.0612, 0 )
 
 [sub_resource type="AnimationNodeStateMachinePlayback" id=20]
 
+[sub_resource type="CapsuleShape2D" id=21]
+radius = 6.48871
+
 [node name="Player" type="KinematicBody2D"]
 script = ExtResource( 1 )
 
@@ -235,3 +238,5 @@ active = true
 parameters/playback = SubResource( 20 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 2 )
+shape = SubResource( 21 )
