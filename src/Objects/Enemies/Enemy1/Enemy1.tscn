@@ -5,7 +5,7 @@
 [ext_resource path="res://assets/Enemies/Enemy1/enemy_sheet.png" type="Texture" id=3]
 
 [sub_resource type="RectangleShape2D" id=1]
-extents = Vector2( 14.8117, 8.95197 )
+extents = Vector2( 9.96977, 7.97793 )
 
 [sub_resource type="Animation" id=2]
 resource_name = "idle"
@@ -26,17 +26,19 @@ tracks/0/keys = {
 }
 
 [node name="Enemy1" instance=ExtResource( 1 )]
+position = Vector2( 11.4905, -4.04419 )
 script = ExtResource( 2 )
-velocity = 50
+velocity = 20
+gravity = 10
+jump_speed = -100
 
 [node name="Sprite" parent="." index="0"]
 texture = ExtResource( 3 )
 hframes = 12
-frame = 11
+frame = 7
 
 [node name="CollisionShape2D" parent="." index="1"]
-visible = false
-position = Vector2( 2.5, 3.125 )
+position = Vector2( -1.42547, 4.06824 )
 shape = SubResource( 1 )
 
 [node name="VisibilityNotifier2D" parent="." index="2"]
